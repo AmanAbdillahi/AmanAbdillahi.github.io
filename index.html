@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
 
-```
+
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background: #0a0a0a;
@@ -100,9 +100,10 @@
         position: absolute;
         width: 4px;
         height: 4px;
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(138, 43, 226, 0.6);
         border-radius: 50%;
         animation: float 15s infinite;
+        box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
     }
 
     @keyframes float {
@@ -116,11 +117,12 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(15, 15, 25, 0.8);
         backdrop-filter: blur(10px);
         padding: 1rem 2rem;
         z-index: 1000;
         animation: slideDown 0.5s ease;
+        border-bottom: 1px solid rgba(138, 43, 226, 0.2);
     }
 
     @keyframes slideDown {
@@ -140,6 +142,10 @@
         color: white;
         font-size: 1.5rem;
         font-weight: bold;
+        background: linear-gradient(135deg, #8a2be2, #9400d3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
     }
 
     .hamburger {
@@ -213,13 +219,14 @@
             width: 70%;
             max-width: 300px;
             height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a0a2e 0%, #0f051d 100%);
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 2rem;
             transition: right 0.3s ease;
-            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+            border-left: 1px solid rgba(138, 43, 226, 0.3);
         }
 
         nav ul.active {
@@ -273,15 +280,15 @@
     .hero-title {
         font-size: 4rem;
         margin-bottom: 1rem;
-        background: linear-gradient(to right, #fff, #f0f0f0);
+        background: linear-gradient(135deg, #fff, #8a2be2, #9400d3);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: glow 2s ease-in-out infinite;
     }
 
     @keyframes glow {
-        0%, 100% { filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); }
-        50% { filter: drop-shadow(0 0 20px rgba(255,255,255,0.8)); }
+        0%, 100% { filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.6)); }
+        50% { filter: drop-shadow(0 0 40px rgba(148, 0, 211, 0.8)); }
     }
 
     .hero-subtitle {
@@ -293,27 +300,31 @@
     .cta-button {
         display: inline-block;
         padding: 1rem 2rem;
-        background: white;
-        color: #667eea;
+        background: linear-gradient(135deg, #8a2be2, #4b0082);
+        color: white;
         text-decoration: none;
         border-radius: 50px;
         font-weight: bold;
         transition: all 0.3s;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+        border: 2px solid rgba(138, 43, 226, 0.5);
     }
 
     .cta-button:hover {
         transform: translateY(-3px);
-        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        box-shadow: 0 15px 40px rgba(138, 43, 226, 0.6);
+        border-color: rgba(138, 43, 226, 0.8);
     }
 
     .content-section {
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(20, 20, 30, 0.85);
         border-radius: 20px;
         padding: 3rem;
         margin-bottom: 2rem;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         animation: fadeIn 1s ease;
+        border: 1px solid rgba(138, 43, 226, 0.2);
+        backdrop-filter: blur(10px);
     }
 
     @keyframes fadeIn {
@@ -324,7 +335,7 @@
     h2 {
         font-size: 2.5rem;
         margin-bottom: 2rem;
-        color: #667eea;
+        color: #fff;
         position: relative;
         display: inline-block;
     }
@@ -336,8 +347,9 @@
         left: 0;
         width: 50px;
         height: 4px;
-        background: linear-gradient(to right, #667eea, #764ba2);
+        background: linear-gradient(to right, #8a2be2, #9400d3);
         border-radius: 2px;
+        box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
     }
 
     .skills-grid {
@@ -348,17 +360,20 @@
     }
 
     .skill-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%);
         padding: 2rem;
         border-radius: 15px;
         color: white;
         transition: all 0.3s;
         cursor: pointer;
+        border: 1px solid rgba(138, 43, 226, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .skill-card:hover {
         transform: translateY(-10px) scale(1.05);
-        box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 20px 40px rgba(138, 43, 226, 0.5);
+        border-color: rgba(138, 43, 226, 0.6);
     }
 
     .skill-title {
@@ -385,7 +400,7 @@
         top: 0;
         height: 100%;
         width: 3px;
-        background: linear-gradient(to bottom, #667eea, #764ba2);
+        background: linear-gradient(to bottom, #8a2be2, #4b0082);
     }
 
     .timeline-item {
@@ -412,13 +427,13 @@
         top: 0;
         width: 15px;
         height: 15px;
-        background: #667eea;
+        background: #8a2be2;
         border-radius: 50%;
-        box-shadow: 0 0 0 4px white, 0 0 0 8px #667eea;
+        box-shadow: 0 0 0 4px rgba(20, 20, 30, 0.9), 0 0 0 8px #8a2be2, 0 0 20px rgba(138, 43, 226, 0.5);
     }
 
     .timeline-date {
-        color: #764ba2;
+        color: #9400d3;
         font-weight: bold;
         margin-bottom: 0.5rem;
     }
@@ -427,10 +442,11 @@
         font-size: 1.3rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
+        color: #fff;
     }
 
     .timeline-company {
-        color: #667eea;
+        color: #8a2be2;
         margin-bottom: 0.5rem;
     }
 
@@ -442,16 +458,19 @@
     }
 
     .contact-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%);
         padding: 2rem;
         border-radius: 15px;
         color: white;
         text-align: center;
         transition: all 0.3s;
+        border: 1px solid rgba(138, 43, 226, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .contact-card:hover {
         transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(138, 43, 226, 0.5);
     }
 
     .contact-icon {
@@ -467,12 +486,14 @@
     }
 
     .language-tag {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%);
         color: white;
         padding: 0.5rem 1.5rem;
         border-radius: 25px;
         font-weight: 600;
         animation: popIn 0.5s ease;
+        border: 1px solid rgba(138, 43, 226, 0.3);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     @keyframes popIn {
@@ -482,12 +503,13 @@
     }
 
     footer {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(10, 10, 15, 0.9);
         color: white;
         text-align: center;
         padding: 2rem;
         position: relative;
         z-index: 2;
+        border-top: 1px solid rgba(138, 43, 226, 0.2);
     }
 
     @media (max-width: 768px) {
@@ -508,9 +530,13 @@
 
 </head>
 <body>
-    <div class="particles" id="particles"></div>
+    <div class="bg-decoration decoration-1"></div>
+    <div class="bg-decoration decoration-2"></div>
+    <div class="bg-decoration decoration-3"></div>
 
 ```
+<div class="particles" id="particles"></div>
+
 <nav>
     <div class="nav-container">
         <div class="logo">AA</div>
@@ -523,8 +549,8 @@
             <li><a href="#hero" class="nav-link">Accueil</a></li>
             <li><a href="#about" class="nav-link">À propos</a></li>
             <li><a href="#skills" class="nav-link">Compétences</a></li>
-            <li><a href="#projects" class="nav-link">Projets</a></li>
             <li><a href="#experience" class="nav-link">Expérience</a></li>
+            <li><a href="#projects" class="nav-link">Projets</a></li>
             <li><a href="#education" class="nav-link">Formation</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -543,7 +569,7 @@
     <div class="container">
         <div class="content-section">
             <h2>À Propos</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
                 Lauréat en licence de Génie Informatique, je suis passionné par le développement logiciel et les technologies web et mobiles. Je maîtrise la programmation mobile avec Java et Flutter, ainsi que le développement web avec ASP.NET, PHP (CodeIgniter) et Java JEE. J'ai également de bonnes bases en sécurité et administration réseau (CCNA-3), ce qui me permet d'adopter une approche globale et sécurisée dans mes projets. Motivé, curieux et rigoureux, je cherche à mettre mes compétences au service d'une équipe dynamique et innovante.
             </p>
         </div>
@@ -603,72 +629,6 @@
     </div>
 </section>
 
-<section id="projects">
-    <div class="container">
-        <div class="content-section">
-            <h2>Mes Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-number">01</div>
-                    <h3 class="project-title">CCLIBAN</h3>
-                    <p class="project-description">
-                        Site e-commerce complet avec système d'achat intégré et gestion de livraison. Une plateforme moderne permettant aux utilisateurs de parcourir des produits, effectuer des achats sécurisés et suivre leurs commandes.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">ASP.NET</span>
-                        <span class="tech-badge">C#</span>
-                        <span class="tech-badge">E-commerce</span>
-                    </div>
-                    <div class="project-footer">
-                        <span class="project-year">📅 2025</span>
-                        <a href="https://github.com/AmanAbdillahi/CCLIBAN" target="_blank" class="project-link">
-                            Voir sur GitHub →
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-number">02</div>
-                    <h3 class="project-title">PROJET 2</h3>
-                    <p class="project-description">
-                        Application mobile innovante d'économie de data cellulaire. Permet aux utilisateurs de monitorer et optimiser leur consommation de données mobiles avec des statistiques détaillées et des recommandations personnalisées.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Kotlin</span>
-                        <span class="tech-badge">Android</span>
-                        <span class="tech-badge">Mobile</span>
-                    </div>
-                    <div class="project-footer">
-                        <span class="project-year">📅 2026</span>
-                        <a href="https://github.com/AmanAbdillahi/projet2" target="_blank" class="project-link">
-                            Voir sur GitHub →
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-number">03</div>
-                    <h3 class="project-title">PROJET 3</h3>
-                    <p class="project-description">
-                        Site web professionnel pour ma société de développement local. Vitrine digitale présentant nos services, notre expertise et permettant aux clients potentiels de nous contacter facilement via un système d'email intégré.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">PHP</span>
-                        <span class="tech-badge">EmailJS</span>
-                        <span class="tech-badge">HTML/CSS/JS</span>
-                    </div>
-                    <div class="project-footer">
-                        <span class="project-year">📅 2026</span>
-                        <a href="https://github.com/AmanAbdillahi/projet3" target="_blank" class="project-link">
-                            Voir sur GitHub →
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="experience">
     <div class="container">
         <div class="content-section">
@@ -678,7 +638,7 @@
                     <div class="timeline-date">Juin 2024 - Septembre 2024</div>
                     <div class="timeline-title">Ingénieur Software</div>
                     <div class="timeline-company">CNSS - Djibouti, Djibouti</div>
-                    <ul style="margin-top: 1rem; line-height: 1.8;">
+                    <ul style="margin-top: 1rem; line-height: 1.8; color: #ccc;">
                         <li>Analyse des besoins</li>
                         <li>Conception d'une application web</li>
                         <li>Développement d'une application web en PHP</li>
@@ -688,6 +648,65 @@
         </div>
     </div>
 </section>
+
+
+
+<section id="projects">
+    <div class="container">
+        <div class="content-section">
+            <h2>Mes Projets</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-card">
+                    <div class="skill-title">📱 EcoDonees</div>
+                    <div class="skill-items">
+                        • Application mobile developper en Kotlin, innovante d'économie de data cellulaire. Permet aux utilisateurs de monitorer et optimiser leur consommation de données mobiles avec des statistiques détaillées et des recommandations personnalisées.</br>
+                        </br>📅 2026,  <a href="https://github.com/AmanAbdillahi/projet2" target="_blank" class="project-link">
+                            Voir sur GitHub →
+                        </a>
+                        </br>
+                        <a href="https://github.com/AmanAbdillahi/projet2" target="_blank" class="project-link">
+                            Telecharger l'application →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-title">🌐 AMANENTREPRISE</div>
+                    <div class="skill-items">
+                        • Site web professionnel developper en PHP pour ma société de développement local. Vitrine digitale présentant nos services, notre expertise et permettant aux clients potentiels de nous contacter facilement via un système d'email intégré.</br>
+                        📅 2026,  <a href="https://amanentreprise.page.gd" target="_blank" class="project-link">
+                            Voir le site →
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-title">🌐 CCLIBAN</div>
+                    <div class="skill-items">
+                        • Site e-commerce developper en ASP.net, complet avec système d'achat intégré et gestion de livraison. Une plateforme moderne permettant aux utilisateurs de parcourir des produits, effectuer des achats sécurisés et suivre leurs commandes.</br>
+                    </br>📅 2025,  <a href="https://github.com/AmanAbdillahi/CCLIBAN" target="_blank" class="project-link">
+                            Voir sur GitHub →
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 3rem;">Technologies utiliser</h2>
+            <div class="languages">
+                <div class="language-tag">Kotlin, Android Mobile</div>
+                <div class="language-tag">PHP, EmailJS HTML/CSS/JS</div>
+                <div class="language-tag">ASP.NET, C# E-commerce</div>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 <section id="education">
     <div class="container">
@@ -737,7 +756,7 @@
             </div>
 
             <div style="margin-top: 3rem; text-align: center;">
-                <h3 style="color: #667eea; margin-bottom: 1rem;">Centres d'Intérêt</h3>
+                <h3 style="color: #8a2be2; margin-bottom: 1rem;">Centres d'Intérêt</h3>
                 <div class="languages">
                     <div class="language-tag">⚽ Sport</div>
                     <div class="language-tag">📚 Lecture</div>
@@ -823,7 +842,7 @@
         });
     });
 </script>
-```
+
 
 </body>
 </html>
